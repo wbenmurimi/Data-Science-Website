@@ -75,6 +75,8 @@
                                     <div class=" form-group  {{ $errors->has('message') ? ' has-error' : '' }}">             
                                         <div class="input-field col m12 s12">
                                            <input id="message" type="text" class="form-control" name="message" value="{{ old('message') }}" required>
+                                            <textarea id="textarea1" class="materialize-textarea" name="message"></textarea>
+
                                             <label for="textarea1">Message</label>
                                             @if ($errors->has('message'))
                                             <span class="help-block">

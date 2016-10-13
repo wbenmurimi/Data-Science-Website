@@ -29,6 +29,7 @@
                             <div class="card-content z-depth-2 " >
                                 <form class=" " role="form" method="POST" action="{{ url('/update-user-bio') }}">
                                     {{ csrf_field() }}
+<<<<<<< HEAD
 
                                     <div class=" form-group cmu" >
                                     <!-- <label class="black-text">Year group</label> -->
@@ -49,6 +50,27 @@
                                     <strong>{{ $errors->first('bio') }}</strong>
                                 </span>
                                 @endif
+=======
+                                    <div class=" form-group  {{ $errors->has('bio') ? ' has-error' : '' }}">             
+                                        <div class="input-field col m12 s12">
+                                            <textarea name="profile" id="textarea1" class="materialize-textarea"></textarea>
+                                            <label for="textarea1"></label>
+                                            @if ($errors->has('bio'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('bio') }}</strong>
+                                            </span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col m8 offset-m0">
+                                            <button type="submit" class="waves-effect waves-light btn right">
+                                                Update Bio
+                                            </button>                    
+                                        </div>
+                                    </div>
+                                </form>
+>>>>>>> f00b02b68983d0e99784b6e339c22bcfbc93289d
                             </div>
                         </div>
 

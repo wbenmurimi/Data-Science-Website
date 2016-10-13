@@ -36,6 +36,31 @@
                             {{ csrf_field() }}
                             <input id="longitude"  type="text" class="form-control" hidden="" name="longitude" value="">
                             <input id="latitude"  type="text" class="form-control" hidden="" name="latitude" value="">
+                           
+                            <div class="form-group">
+                                <div class="input-field col m12 s12">
+                                    @if(Session::has('error-message'))
+                                        <div class="alert alert-dismissible alert-success">
+                                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                            <strong>{!! Session::get('error-message') !!}</strong>
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-field col m12 s12">
+                                    @if(Session::has('success-message'))
+                                        <div class="alert alert-dismissible alert-success">
+                                            <script type="text/javascript">
+                                                var $toastContent = $('<span>Thank you for your comments</span>');
+                                                Materialize.toast($toastContent, 5000);
+                                            </script>
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
+
                             <div class=" form-group  {{ $errors->has('name') ? ' has-error' : '' }}">
 
                                 <div class="input-field col m12 s12">
@@ -101,20 +126,7 @@
         <!-- Start of comment column-->
         <div class="col m5 l5">
             <ul>
-             <li>
-                    <div class="card-stacked">
-                        <div class="card horizontal">
-                            <div class="card-stacked">
-                                <div class="card-action cmu2 white-text">
-                                    <a href="#" class="white-text">MTN network is down at Kacyiru</a>
-                                </div>
-                                <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits  <a class="modal-trigger" href="#modal1">Read more..</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+             
             @foreach($comments as $comment)
                 <li>
                     <div class="card-stacked">
@@ -138,7 +150,7 @@
                     <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
                     {!! $comments->links() !!}
                     <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                </ul>
+
             </center>
         </div>
         <!-- end of comments-->
