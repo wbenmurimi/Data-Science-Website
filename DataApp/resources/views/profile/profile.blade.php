@@ -31,7 +31,7 @@
                                     {{ csrf_field() }}
                                     <div class=" form-group  {{ $errors->has('bio') ? ' has-error' : '' }}">             
                                         <div class="input-field col m12 s12">
-                                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                            <textarea name="profile" id="textarea1" class="materialize-textarea"></textarea>
                                             <label for="textarea1"></label>
                                             @if ($errors->has('bio'))
                                             <span class="help-block">

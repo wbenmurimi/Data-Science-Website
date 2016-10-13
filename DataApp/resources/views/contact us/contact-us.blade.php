@@ -74,7 +74,7 @@
 
                                     <div class=" form-group  {{ $errors->has('message') ? ' has-error' : '' }}">             
                                         <div class="input-field col m12 s12">
-                                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                            <textarea id="textarea1" class="materialize-textarea" name="message"></textarea>
                                             <label for="textarea1">Message</label>
                                             @if ($errors->has('message'))
                                             <span class="help-block">
