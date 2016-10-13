@@ -14,17 +14,17 @@
                 <div class="col m8 offset-m2 ">
                     <div class="card horizontal">
                         <div class="card-stacked">
-                            <div class="card-action lighten-2 teal">
-                                <a  href="#">Chat with the club members</a>
+                            <div class="card-action cmu">
+                                <a  class="white-text" href="#">Chat with the club members</a>
                             </div>
                             <div class="card-content z-depth-2 " >
-                                <form class=" " role="form" method="POST" action="{{ url('/chat-message') }}">
+                                <!-- <form class=" " role="form" method="POST" action="#"> -->
                                     {{ csrf_field() }}
  
                                     <div class=" form-group  {{ $errors->has('message') ? ' has-error' : '' }}">             
                                         <div class="input-field col m12 s12">
-                                            <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                            <label for="textarea1">Message</label>
+                                           <input id="message" type="text" class="form-control" name="message" value="{{ old('message') }}" required >
+                                            <label for="message">Message</label>
                                             @if ($errors->has('message'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('message') }}</strong>
@@ -33,13 +33,13 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="col m8 offset-m0">
-                                            <button type="submit" class="waves-effect waves-light btn right">
+                                        <div class="col l12 m12 ">
+                                            <button type="submit" class="waves-effect waves-light btn pull-right cmu">
                                                 Send 
                                             </button>                    
                                         </div>
                                     </div>
-                                </form>
+                                <!-- </form> -->
                             </div>
                         </div>
                     </div>

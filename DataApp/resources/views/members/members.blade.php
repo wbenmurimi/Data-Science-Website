@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
 <div class="">
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="scroll-1">
+           <!--  <div class="scroll-1">
                 <div class="container-fluid card  z-depth-2 waves-effect waves-light">
                     <div class="cover z-depth-1" style="">
                         <div class="filter ">
@@ -57,7 +57,8 @@
                <button class=" darken-1 white-text text-darken-3 waves-effect waves-light btn" href='#'>Twitter</button>
            </div>
        </div>
-   </div>
+   </div> -->
+   @foreach($profiles as $profile)
 
    <div class="scroll-1">
     <div class="container-fluid card  z-depth-2 waves-effect waves-light">
@@ -69,98 +70,22 @@
                         Hi
                         </div>
                         <div class="col l9">
-                            Benson Wachira
+                            {{ $profile->fName }}  {{ $profile->LName }}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="card-content cmu white-text">
-            <div class="card-title">MSIT class of 2018.</div>
-            <b>Meet benovolent Benson,</b>Benson is passionate about technology and entrepreneurship. He aspires to use the power of data science to change how businesses and government operate. Despite being a good programmer, he also does aerobics and plays volleyball during his free time.
+            <div class="card-title">{{ $profile->year_group }}</div>
+           {{ $profile->profile }}.
         </div>
         <div class="card-action  darken-2">
-            <button href="" class="darken-1 white-text text-darken-3 waves-effect waves-light btn">Facebook</button>
-            <button class=" darken-1 white-text text-darken-3 waves-effect waves-light btn" href='#'>Twitter</button>
+            <p class="darken-1 white-text text-darken-3 waves-effect ">{{ $profile->email }}</p>
         </div>
     </div>
 </div>
-<div class="scroll-1">
-    <div class="container-fluid card  z-depth-2 waves-effect waves-light">
-        <div class="cover z-depth-1" style=";">
-            <div class="filter ">
-                <div class="cover-text -text text-darken-4">
-                 Brian Otieno
-             </div>
-         </div>
-     </div>
-     <div class="card-content cmu white-text">
-        <div class="card-title">MSIT class of 2018.</div>
-        <b>Get an account on GitHub,</b> and verify your email. Remember that the username you choose will be the domain name of your website (unless you want to pay for a .com or something). Click on the button below to see detailed instructions regarding how you can accomplish this without getting your dick caught on a ceiling fan (or an oven, for that matter).
-    </div>
-    <div class="card-action  darken-2">
-       <button href="" class="darken-1 white-text text-darken-3 waves-effect waves-light btn">Facebook</button>
-       <button class=" darken-1 white-text text-darken-3 waves-effect waves-light btn" href='#'>Twitter</button>
-   </div>
-</div>
-</div>
-<div class="scroll-1">
-    <div class="container-fluid card  z-depth-2 waves-effect waves-light">
-        <div class="cover z-depth-1" style="background-image: url('http://localhost:8000/background2.jpg');">
-            <div class="filter ">
-                <div class="cover-text -text text-darken-4">
-                    Clovis
-                </div>
-            </div>
-        </div>
-        <div class="card-content cmu white-text">
-            <div class="card-title">MSIT class of 2018.</div>
-            <b>Get an account on GitHub,</b> and verify your email. Remember that the username you choose will be the domain name of your website (unless you want to pay for a .com or something). Click on the button below to see detailed instructions regarding how you can accomplish this without getting your dick caught on a ceiling fan (or an oven, for that matter).
-        </div>
-        <div class="card-action  darken-2">
-           <button href="" class="darken-1 white-text text-darken-3 waves-effect waves-light btn">Facebook</button>
-           <button class=" darken-1 white-text text-darken-3 waves-effect waves-light btn" href='#'>Twitter</button>
-       </div>
-   </div>
-</div>
-<div class="scroll-1">
-    <div class="container-fluid card  z-depth-2 waves-effect waves-light">
-        <div class="cover z-depth-1" style="background-image: url('http://localhost:8000/background3.jpg');">
-            <div class="filter ">
-                <div class="cover-text -text text-darken-4">
-                    Romalice
-                </div>
-            </div>
-        </div>
-        <div class="card-content cmu white-text">
-            <div class="card-title">MSIT class of 2018.</div>
-            <b>Get an account on GitHub,</b> and verify your email. Remember that the username you choose will be the domain name of your website (unless you want to pay for a .com or something). Click on the button below to see detailed instructions regarding how you can accomplish this without getting your dick caught on a ceiling fan (or an oven, for that matter).
-        </div>
-        <div class="card-action  darken-2">
-           <button href="" class="darken-1 white-text text-darken-3 waves-effect waves-light btn">Facebook</button>
-           <button class=" darken-1 white-text text-darken-3 waves-effect waves-light btn" href='#'>Twitter</button>
-       </div>
-   </div>
-</div>
-<div class="scroll-1">
-    <div class="container-fluid card  z-depth-2 waves-effect waves-light">
-        <div class="cover z-depth-1" style="background-image: url('http://localhost:8000/background1.jpg');">
-            <div class="filter ">
-                <div class="cover-text -text text-darken-4">
-                    Rene
-                </div>
-            </div>
-        </div>
-        <div class="card-content cmu white-text">
-            <div class="card-title">MSIT class of 2017.</div>
-            <b>Get an account on GitHub,</b> and verify your email. Remember that the username you choose will be the domain name of your website (unless you want to pay for a .com or something). Click on the button below to see detailed instructions regarding how you can accomplish this without getting your dick caught on a ceiling fan (or an oven, for that matter).
-        </div>
-        <div class="card-action  darken-2">
-            <button href="" class="darken-1 white-text text-darken-3 waves-effect waves-light btn">Facebook</button>
-            <button class=" darken-1 white-text text-darken-3 waves-effect waves-light btn" href='#'>Twitter</button>
-        </div>
-    </div>
-</div>
+
 </div> 
 </div>
 
@@ -168,5 +93,5 @@
 </div>
 @endsection
 
-@section('myfooter')
-@endsection
+
+ 

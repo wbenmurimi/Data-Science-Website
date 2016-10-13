@@ -43,3 +43,9 @@
 	background-color:#464646 !important;
 }
 
+.biobtn{
+	margin-top: 20px;
+}
+select >option{
+	color: black !important;
+}

@@ -24,7 +24,7 @@
 
                     </div>
         <!-- Start of post column-->
-        <div class="col m4 offset-m0">
+        <div class="col m4 l4">
             <div class="card horizontal">
                 <div class="card-stacked">
                     <div class="card-action cmu">
@@ -86,8 +86,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col m8 offset-m0">
-                                    <button type="submit" class="waves-effect waves-light btn cmu">
+                                <div class="col l12">
+                                    <button type="submit" class="waves-effect waves-light btn cmu pull-right">
                                         Post comment
                                     </button>                    
                                 </div>
@@ -99,9 +99,9 @@
         </div>
         <!-- End of post form-->
         <!-- Start of comment column-->
-        <div class="col m5 offset-m0">
+        <div class="col m5 l5">
             <ul>
-                <li>
+             <li>
                     <div class="card-stacked">
                         <div class="card horizontal">
                             <div class="card-stacked">
@@ -115,69 +115,28 @@
                         </div>
                     </div>
                 </li>
+            @foreach($comments as $comment)
                 <li>
                     <div class="card-stacked">
                         <div class="card horizontal">
                             <div class="card-stacked">
                                 <div class="card-action cmu2 white-text">
-                                    <a href="#">MTN network is down at Kacyiru</a>
+                                    <a href="#" class="white-text">{{ str_limit($comment->subject, $limit = 40, $end = '...') }}</a>
+                                    <span class="pull-right">{{ $comment->created_at }}</span>
                                 </div>
                                 <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits of information.</p>
+                                    <p>{{ tr_limit($comment->message, $limit = 100, $end = '...') }} <a class="modal-trigger" href="#modal1">Read more..</a></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div class="card-stacked">
-                        <div class="card horizontal">
-                            <div class="card-stacked">
-                                <div class="card-action cmu2">
-                                    <a href="#">MTN network is down at Kacyiru</a>
-                                </div>
-                                <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits of information.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="card-stacked">
-                        <div class="card horizontal">
-                            <div class="card-stacked">
-                                <div class="card-action cmu2 white-text">
-                                    <a href="#">MTN network is down at Kacyiru</a>
-                                </div>
-                                <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits of information.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="card-stacked">
-                        <div class="card horizontal">
-                            <div class="card-stacked">
-                                <div class="card-action cmu2">
-                                    <a href="#">MTN network is down at Kacyiru</a>
-                                </div>
-                                <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits of information.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+               @endforeach 
             </ul>
             <center>
                 <ul class="pagination">
                     <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                    <li class="active"><a href="#!">1</a></li>
-                    <li class="waves-effect"><a href="#!">2</a></li>
-                    <li class="waves-effect"><a href="#!">3</a></li>
+                    {!! $comments->links() !!}
                     <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
                 </ul>
             </center>

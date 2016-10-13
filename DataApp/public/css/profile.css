@@ -16,7 +16,7 @@ max-height: 1.2em;
 
 .scrollToTop {
 position: fixed;
-top: 100px;
+bottom: 100px;
 right: 40px;
 display: none;
 }

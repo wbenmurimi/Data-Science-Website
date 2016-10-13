@@ -74,7 +74,7 @@
 
                                     <div class=" form-group  {{ $errors->has('message') ? ' has-error' : '' }}">             
                                         <div class="input-field col m12 s12">
-                                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                           <input id="message" type="text" class="form-control" name="message" value="{{ old('message') }}" required>
                                             <label for="textarea1">Message</label>
                                             @if ($errors->has('message'))
                                             <span class="help-block">
@@ -84,8 +84,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="col m8 offset-m0">
-                                            <button type="submit" class="waves-effect waves-light btn right cmu">
+                                        <div class="col m12 l12">
+                                            <button type="submit" class="waves-effect waves-light btn pull-right cmu">
                                                 Send message
                                             </button>                    
                                         </div>
