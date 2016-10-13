@@ -7,7 +7,7 @@
             <div id="skrollr-body">
                 <div id="non-skrollr">
                    <div class="container-fluid card  z-depth-2 waves-effect waves-light">
-                    <div class="cover z-depth-1" style="background-image: url('{{http://localhost:8000/background2.jpg');">
+                    <div class="cover z-depth-1" style="background-image: url('http://localhost:8000/background2.jpg');">
                         <div class="filter " style="opacity: 0.7;">
                             <div class="cover-text text-darken-4">
                                 <span style="font-size: 50px;">< Club members profiles /></span>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="row">
-           <!--  <div class="scroll-1">
+            <div class="scroll-1">
                 <div class="container-fluid card  z-depth-2 waves-effect waves-light">
                     <div class="cover z-depth-1" style="">
                         <div class="filter ">
@@ -57,12 +57,12 @@
                <button class=" darken-1 white-text text-darken-3 waves-effect waves-light btn" href='#'>Twitter</button>
            </div>
        </div>
-   </div> -->
+   </div> 
    @foreach($profiles as $profile)
 
    <div class="scroll-1">
     <div class="container-fluid card  z-depth-2 waves-effect waves-light">
-        <div class="cover z-depth-1"  style="background-image: url('http://localhost:8000/background3.jpg');">
+        <div class="cover z-depth-1"  style="">
             <div class="filter ">
                 <div class="cover-text -text text-darken-4">
                     <div class="row ">
@@ -78,13 +78,14 @@
         </div>
         <div class="card-content cmu white-text">
             <div class="card-title">{{ $profile->year_group }}</div>
-           {{ $profile->profile }}.
+           {!! $profile->profile !!}.
         </div>
         <div class="card-action  darken-2">
             <p class="darken-1 white-text text-darken-3 waves-effect ">{{ $profile->email }}</p>
         </div>
     </div>
 </div>
+@endforeach
 
 </div> 
 </div>

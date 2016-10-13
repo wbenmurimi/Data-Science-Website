@@ -23,7 +23,7 @@
                     <div class="cover z-depth-1" style="">
                         <div class="filter " style="opacity: 0.7">
                             <div class="cover-text text-darken-4">
-                                <span style="font-size: 50px">< Welcome {{ Auth::user()->fName }} /></span>
+                                <span style="font-size: 50px">< Welcome {{ Auth::user()->name }} /></span>
                             </div>
                         </div>
                     </div>

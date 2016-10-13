@@ -50,7 +50,7 @@
             @else
             <li >
               <a class="dropdown" href='#' data-activates='dropdown1'>
-              {{ Auth::user()->fName }} <i class="material-icons right">arrow_drop_down</i>
+              {{ Auth::user()->name }} <i class="material-icons right">arrow_drop_down</i>
               </a>
 
               <ul id='dropdown1' class='dropdown-content'>

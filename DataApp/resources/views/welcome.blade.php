@@ -133,11 +133,11 @@
                         <div class="card horizontal">
                             <div class="card-stacked">
                                 <div class="card-action cmu2 white-text">
-                                    <a href="#" class="white-text">{{ str_limit($comment->subject, $limit = 40, $end = '...') }}</a>
+                                    <a href="#" class="white-text">{{ str_limit($comment->subject, $limit = 30) }}</a>
                                     <span class="pull-right">{{ $comment->created_at }}</span>
                                 </div>
                                 <div class="card-content">
-                                    <p>{{ tr_limit($comment->message, $limit = 100, $end = '...') }} <a class="modal-trigger" href="#modal1">Read more..</a></p>
+                                    <p>{{ str_limit($comment->message, $limit = 50) }} <a class="modal-trigger" href="#modal1">Read more..</a></p>
                                 </div>
                             </div>
                         </div>
